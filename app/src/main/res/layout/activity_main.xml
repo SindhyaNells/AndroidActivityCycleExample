@@ -10,42 +10,86 @@
     tools:context="com.example.assignment.assignment1.MainActivity">
 
 
+    <TextView
+        android:id="@+id/text_view_activity_a"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/et_margin"
+        android:layout_alignParentTop="true"
+        android:text="@string/activity_a"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_text_size"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/text_view_activity_a"
+        android:background="@color/colorGrey" />
+
+
     <LinearLayout
+        android:id="@+id/layout_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_activity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_label"
+            android:padding="@dimen/btn_padding"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="@dimen/et_margin"
+            android:background="@color/colorPrimaryDark"/>
 
         <Button
             android:id="@+id/btn_dialog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_label"
+            android:padding="@dimen/btn_padding"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimaryDark"/>
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/layout_activity"
+        android:layout_margin="@dimen/layout_margin"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/thread_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:textStyle="bold"
+            android:textSize="@dimen/thread_text_size"
+            android:text="@string/count_label" />
 
         <TextView
+            android:id="@+id/thread_count"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/thread_text_size"/>
 
     </LinearLayout>
 
+
     <Button
+        android:id="@+id/btn_close_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/close_app"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

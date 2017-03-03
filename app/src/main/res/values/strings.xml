@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">Assignment1</string>
+    <string name="app_name">Android Life Cycle</string>
 
-    <string name="count_label">Thread count</string>
+    <!--Text View label-->
+    <string name="activity_a">Activity A</string>
+    <string name="activity_b">Activity B</string>
+    <string name="count_label">Thread Counter</string>
 
+    <!--Button label-->
     <string name="activity_label">Start Activity B</string>
     <string name="dialog_label">Dialog</string>
-
     <string name="close_app">Close</string>
 
 </resources>
