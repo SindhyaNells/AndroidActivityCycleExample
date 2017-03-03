@@ -10,5 +10,6 @@
     <string name="activity_label">Start Activity B</string>
     <string name="dialog_label">Dialog</string>
     <string name="close_app">Close</string>
+    <string name="finish">Finish B</string>
 
 </resources>
