@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView textCount;
     private int count=0;
     private static final int ACTIVITYB_RESULT_CODE=1;
+    private static final int ACTIVITY_DIALOG_CODE=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +53,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(activity_intent,ACTIVITYB_RESULT_CODE);
                 break;
             case R.id.btn_dialog:
-                AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+                /*AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
                 builder.setMessage(R.string.dialog_text).setTitle(R.string.dialog_label);
                 AlertDialog dialog= builder.create();
-                dialog.show();
+                dialog.show();*/
 
+                Intent dialog_intent=new Intent(MainActivity.this,DialogActivity.class);
+                dialog_intent.putExtra("count",count);
+                startActivityForResult(dialog_intent,ACTIVITY_DIALOG_CODE);
                 break;
             case R.id.btn_close_app:
                 MainActivity.this.finish();
@@ -70,6 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(requestCode==ACTIVITYB_RESULT_CODE){
             if(resultCode==RESULT_OK){
                 int res_count= data.getExtras().getInt("count");
+                count=res_count;
+            }
+        }
+        else if(requestCode==ACTIVITY_DIALOG_CODE){
+            if(resultCode==RESULT_OK){
+                int res_count=data.getExtras().getInt("count");
                 count=res_count;
             }
         }
