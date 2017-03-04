@@ -4,7 +4,9 @@
     <!--Text View label-->
     <string name="activity_a">Activity A</string>
     <string name="activity_b">Activity B</string>
-    <string name="count_label">Thread Counter</string>
+    <string name="activity_b_desp">This is activity B which occupies the complete window. Activity A is paused.
+    However, the thread count is incremented.</string>
+    <string name="count_label">Thread Counter: </string>
     <string name="dialog_text">This is a simple dialog</string>
 
 

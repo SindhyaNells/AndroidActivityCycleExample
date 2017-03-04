@@ -1,6 +1,7 @@
 package com.example.assignment.assignment1;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setLogo(R.mipmap.ic_launcher);
+            actionBar.setDisplayUseLogoEnabled(true);
+        }
         textCount=(TextView)findViewById(R.id.thread_count);
 
         btnActivity=(Button)findViewById(R.id.btn_activity);

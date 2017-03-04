@@ -9,31 +9,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.assignment.assignment1.ActivityB">
 
-    <TextView
-        android:id="@+id/text_view_activity_b"
+    <LinearLayout
+        android:id="@+id/layout_headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/et_margin"
-        android:layout_alignParentTop="true"
-        android:text="@string/activity_b"
-        android:textStyle="bold"
-        android:textSize="@dimen/activity_text_size" />
+        android:orientation="vertical">
 
-    <View
+        <TextView
+            android:id="@+id/text_view_activity_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/et_margin"
+            android:text="@string/activity_b"
+            android:textSize="@dimen/activity_text_size"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_activity_desp"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/text_view_activity_b"
-        android:background="@color/colorGrey" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_headline" />
 
     <Button
         android:id="@+id/btn_finish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/finish"
+        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        android:textColor="@color/colorWhite"
-        android:layout_alignParentBottom="true"/>
-
+        android:text="@string/finish"
+        android:textColor="@color/colorWhite" />
 
 
 </RelativeLayout>
